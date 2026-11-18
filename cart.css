@@ -1,0 +1,26 @@
+
+.cart-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: white;
+  padding: 18px;
+  margin: 12px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #00000012;
+}
+
+.cart-item button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
