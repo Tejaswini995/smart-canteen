@@ -1,0 +1,39 @@
+
+.admin-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 5%;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stats article,
+.order-card,
+.availability-row {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px #00000010;
+}
+
+.stats p {
+  font-size: 28px;
+  font-weight: bold;
+  color: #e65b32;
+}
+
+.order-card select {
+  padding: 10px;
+  border-radius: 6px;
+}
+
+@media (max-width: 700px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
