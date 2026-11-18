@@ -1,4 +1,3 @@
-
 function getOrders() {
   return JSON.parse(
     localStorage.getItem("orders") || "[]"
@@ -7,10 +6,7 @@ function getOrders() {
 
 function updateOrderStatus(orderId, status) {
   const orders = getOrders();
-
-  const order = orders.find(
-    item => item.id === orderId
-  );
+  const order = orders.find(item => item.id === orderId);
 
   if (!order) return;
 
@@ -26,23 +22,18 @@ function updateOrderStatus(orderId, status) {
 
 function displayOrders() {
   const orders = getOrders();
-  const container =
-    document.getElementById("adminOrders");
+  const container = document.getElementById("adminOrders");
 
   container.innerHTML = "";
 
-  document.getElementById("totalOrders")
-    .textContent = orders.length;
+  document.getElementById("totalOrders").textContent =
+    orders.length;
 
-  document.getElementById("pendingOrders")
-    .textContent = orders.filter(
-      order => order.status === "Pending"
-    ).length;
+  document.getElementById("pendingOrders").textContent =
+    orders.filter(order => order.status === "Pending").length;
 
-  document.getElementById("readyOrders")
-    .textContent = orders.filter(
-      order => order.status === "Ready"
-    ).length;
+  document.getElementById("readyOrders").textContent =
+    orders.filter(order => order.status === "Ready").length;
 
   if (orders.length === 0) {
     container.textContent = "No orders yet.";
