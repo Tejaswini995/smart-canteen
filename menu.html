@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>Smart Canteen | Menu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+<main class="menu-page">
+  <a href="index.html">← Home</a>
+  <h1>Our Food Menu</h1>
+
+  <input
+    type="search"
+    id="searchFood"
+    placeholder="Search food..."
+    aria-label="Search food">
+
+  <select id="categoryFilter"
+          aria-label="Food category">
+    <option value="All">All Categories</option>
+    <option value="Veg">Veg</option>
+    <option value="Non-Veg">Non-Veg</option>
+    <option value="Snacks">Snacks</option>
+    <option value="Drinks">Drinks</option>
+  </select>
+
+  <div id="foodContainer" class="food-grid"></div>
+
+  <a class="btn" href="cart.html">
+    View Cart
+  </a>
+</main>
+
+<script src="js/food-data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+</html>
