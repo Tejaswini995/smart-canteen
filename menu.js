@@ -7,7 +7,10 @@ const searchFood =
 const categoryFilter =
   document.getElementById("categoryFilter");
 
-function renderFood() {
+function renderFood(
+  const availability = JSON.parse(
+  localStorage.getItem("foodAvailability") || "{}"
+);) {
   const search = searchFood.value.toLowerCase();
   const category = categoryFilter.value;
 
@@ -25,6 +28,14 @@ function renderFood() {
   foodContainer.innerHTML = "";
 
   filtered.forEach(food => {
+    const isAvailable =
+  availability[food.id] ?? food.available;
+
+button.textContent = isAvailable
+  ? "Add to Cart"
+  : "Unavailable";
+
+button.disabled = !isAvailable;})
     const card = document.createElement("article");
     card.className = "food-card";
 

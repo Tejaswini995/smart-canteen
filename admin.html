@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>Smart Canteen | Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<main class="admin-page">
+  <a href="index.html">← Home</a>
+
+  <h1>Canteen Admin Dashboard</h1>
+  <p>Manage food orders and availability.</p>
+
+  <section class="stats">
+    <article>
+      <h3>Total Orders</h3>
+      <p id="totalOrders">0</p>
+    </article>
+
+    <article>
+      <h3>Pending Orders</h3>
+      <p id="pendingOrders">0</p>
+    </article>
+
+    <article>
+      <h3>Ready Orders</h3>
+      <p id="readyOrders">0</p>
+    </article>
+  </section>
+
+  <h2>Customer Orders</h2>
+  <div id="adminOrders"></div>
+
+  <h2>Food Availability</h2>
+  <div id="availabilityList"></div>
+</main>
+
+<script src="food-data.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
