@@ -7,12 +7,12 @@ const searchFood =
 const categoryFilter =
   document.getElementById("categoryFilter");
 
-function renderFood(
-  const availability = JSON.parse(
-  localStorage.getItem("foodAvailability") || "{}"
-);) {
+function renderFood() {
   const search = searchFood.value.toLowerCase();
   const category = categoryFilter.value;
+  const availability = JSON.parse(
+    localStorage.getItem("foodAvailability") || "{}"
+  );
 
   const filtered = foodItems.filter(food => {
     const matchesName =
@@ -29,13 +29,8 @@ function renderFood(
 
   filtered.forEach(food => {
     const isAvailable =
-  availability[food.id] ?? food.available;
+      availability[food.id] ?? food.available;
 
-button.textContent = isAvailable
-  ? "Add to Cart"
-  : "Unavailable";
-
-button.disabled = !isAvailable;})
     const card = document.createElement("article");
     card.className = "food-card";
 
@@ -46,11 +41,9 @@ button.disabled = !isAvailable;})
     price.textContent = `₹${food.price}`;
 
     const button = document.createElement("button");
-    button.textContent = food.available
-      ? "Add to Cart"
-      : "Unavailable";
-
-    button.disabled = !food.available;
+    button.textContent =
+      isAvailable ? "Add to Cart" : "Unavailable";
+    button.disabled = !isAvailable;
 
     button.addEventListener("click", () => {
       addToCart(food);
